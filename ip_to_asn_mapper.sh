@@ -3,12 +3,13 @@
 # IP to ASN Mapping
 # 02/06/2016
 # whois query for IP to ASN mapping for all regional registries.
+# Author: AGaldamez
 
 # Declared Variables:
-server=v4.whois.cymru.com
-peer_server=v4-peer.whois.cymru.com
-prefix=-p
-registry=-r
+SERVER=v4.whois.cymru.com
+PEER_SERVER=v4-peer.whois.cymru.com
+PREFIX=-p
+REGISTRY=-r
 
 echo -e "\nEnter IPv4 address or Domain:"
 read ip
@@ -20,18 +21,18 @@ read ip
 		echo 
 
 		# Get whois details for IPv4 address:
-		whois -h $server " -r -p $ip" 
+		whois -h $SERVER " -r -p $ip" 
 
 		echo 
-		# Get peer information:
-		whois -h $peer_server $ip
+		# Get PEER information:
+		whois -h $PEER_SERVER $ip
 
 	else	# Get whois details for ipv4 address:
 		echo
-		whois -h $server " -r -p $ip" 
+		whois -h $SERVER " -r -p $ip" 
 		
 		echo
-		# Get peer information:
-		whois -h "$peer_server" "$ip"
+		# Get PEER information:
+		whois -h "$PEER_SERVER" "$ip"
 	fi
 
