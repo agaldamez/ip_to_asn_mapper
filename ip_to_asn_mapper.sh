@@ -8,8 +8,8 @@
 # Declared Variables:
 SERVER=v4.whois.cymru.com
 PEER_SERVER=v4-peer.whois.cymru.com
-PREFIX=-p
-REGISTRY=-r
+#PREFIX=-p
+#REGISTRY=-r
 
 echo -e "\nEnter IPv4 address or Domain:"
 read ip
